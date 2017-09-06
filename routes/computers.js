@@ -9,7 +9,7 @@ router.get("/computers", function(req, res){
         if(err){
             console.log(err);
         } else {
-            res.render("computers/index", {computers: allComputers, currentUser: req.user});
+            res.render("computers/index", {computers: allComputers, currentUser: req.user, page: 'computers'});
         }
     });
     
