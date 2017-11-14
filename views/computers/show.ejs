@@ -2,7 +2,6 @@
 <div>
     <div class="row">
         <div class="col-md-3">
-            <p class="lead">YelpTech</p>
             <div class="list-group">
                 <li class="list-group-item active">info 1</li>
                 <li class="list-group-item">info 2</li>
@@ -16,11 +15,11 @@
                     <h4 class="pull-right">$<%= computer.price %></h4>
                     <h3><a><%= computer.name %></a></h3>
                     <p><%= computer.description%></p>
-                    <p><em>Submitted by: <%= computer.author.username %>, <%= moment(computer.createdAt).fromNow() %></em></p>                   
+                    <p><em>Submitted by: <a href="/users/<%= computer.author.id %>"><%= computer.author.username %></a>, <%= moment(computer.createdAt).fromNow() %></em></p>                   
                     <% if(currentUser && computer.author.id.equals(currentUser._id)){ %>
                         <a class="btn btn-warning" href="/computers/<%= computer._id %>/edit">Edit</a>
                         <form id="delete-form" action="/computers/<%= computer._id %>?_method=DELETE" method="POST">
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
                     </form>
                     <% } %>
                 </div>

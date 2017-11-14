@@ -3,9 +3,18 @@
 <div>
     <header class="jumbotron">
         <div class="container">
-            <h1>Welcome To YelpTech!</h1>
+            <h1>Welcome To TechReview!</h1>
+        <br><br>
             <p>
                 <a class= "btn btn-info btn-lg" href="/computers/new">Add new computer</a>
+            </p>
+            <p>
+                <form action="/computers" method="GET" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="search" placeholder="Search..." class="form-control">
+                        <input type="submit" value="search" class="btn btn-default">
+                    </div>
+                </form>
             </p>
         </div>
     </header>
@@ -13,7 +22,7 @@
     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
         <% computers.forEach(function(computer){ %>
             <div class="col-md-3 col-sm-6">
-                <div class="thumbnail">
+                <div class="thumbnail" id="complayout">
                     <img src= "<%= computer.image %>">
                     <div class="caption">
                         <h4><%= computer.name %></h4>

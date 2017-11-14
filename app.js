@@ -8,11 +8,13 @@ var methodOverride = require('method-override');
 var Computer = require("./models/computer");
 var seedDB = require("./seeds");
 var Comment = require("./models/comment");
+var Phone = require("./models/phone");
 var User = require("./models/user");
 var flash = require('connect-flash');
 
 var commentRoutes = require("./routes/comments");
 var computerRoutes = require("./routes/computers");
+var phoneRoutes = require("./routes/phones");
 var authRoutes = require("./routes/index");
 app.use(methodOverride("_method"));
 app.use(flash());
@@ -47,6 +49,7 @@ app.use(function(req, res, next){
 app.use(authRoutes);
 app.use(computerRoutes);
 app.use(commentRoutes);
+app.use(phoneRoutes);
 
 app.listen(3000, function(){
     console.log("Server is running...");

@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div>
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To TechReview!</h1>
+        <br><br>
+            <p>
+                <a class= "btn btn-info btn-lg" href="/phones/new">Add new phone</a>
+            </p>
+            <p>
+                <form action="/phones" method="GET" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" name="search" placeholder="Search..." class="form-control">
+                        <input type="submit" value="search" class="btn btn-default">
+                    </div>
+                </form>
+            </p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% phones.forEach(function(phone){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail" id="complayout">
+                    <img src= "<%= phone.image %>">
+                    <div class="caption">
+                        <h4><%= phone.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/phones/<%= phone._id %>" class="btn btn-primary">More info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+<% include ../partials/footer %>

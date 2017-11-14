@@ -40,22 +40,22 @@ body {
   }
   
   .slideshow li:nth-child(1) { 
-    background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+    background-image: url(http://a57.foxnews.com/images.foxnews.com/content/fox-news/tech/2017/05/04/can-microsofts-surface-laptop-put-some-hurt-on-chromebook-and-macbook/_jcr_content/par/featured-media/media-0.img.jpg/876/493/1493902413081.jpg?ve=1&tl=1) 
   }
   .slideshow li:nth-child(2) { 
-    background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeW3FAD8XfcTvH3uIITtDim4iknCNqLZgj4As3QT2Eugxiq-5i);
     animation-delay: 10s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(http://i.imgur.com/emvhOnb.jpg);
+    background-image: url(https://icdn3.digitaltrends.com/image/asus-zenbook-ux330-keyboard-1500x1001.jpg?ver=1);
     animation-delay: 20s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+    background-image: url(http://a57.foxnews.com/images.foxnews.com/content/fox-news/tech/2017/05/04/can-microsofts-surface-laptop-put-some-hurt-on-chromebook-and-macbook/_jcr_content/par/featured-media/media-0.img.jpg/876/493/1493902413081.jpg?ve=1&tl=1);
     animation-delay: 30s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeW3FAD8XfcTvH3uIITtDim4iknCNqLZgj4As3QT2Eugxiq-5i);
     animation-delay: 40s; 
   }
   

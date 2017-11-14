@@ -13,3 +13,55 @@
 #delete-form {
     float: right;
 }
+
+.jumbotron {
+    background-color: #0E8D7A;
+    color: white;
+    height: 260px;
+}
+
+.jumbotron a {
+    position: absolute;
+    background-color: #C6A376;
+    border-color: #C6A376;
+}
+
+.jumbotron a:hover {
+    background-color: #B09068;
+    border-color:#B09068;
+}
+
+.form-inline {
+    float:right;
+}
+
+body {
+    background-color: rgba(244, 244, 244, 0.94);
+}
+
+#complayout {
+    background-color: #D5D5D5;
+}
+
+.thumbnail .caption{
+    color: rgb(138, 93, 31);
+}
+
+#complayout a {
+    background-color: #0E8D7A;
+    border-color: #0E8D7A;
+}
+
+#complayout a:hover {
+    background-color: #0A6E60;
+    border-color: #0A6E60;
+}
+
+#nav {
+    background-color: #D5D5D5;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #0E8D7A;
+    border-color: #0E8D7A;
+}

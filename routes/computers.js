@@ -3,16 +3,36 @@ var router = express.Router();
 var Computer = require("../models/computer");
 var middleware = require("../middleware")
 
+//define function for search feature
+function escapeRegex(text){
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
+
 router.get("/computers", function(req, res){
-    //Get all computers from database
-    Computer.find({}, function(err, allComputers){
-        if(err){
-            console.log(err);
-        } else {
-            res.render("computers/index", {computers: allComputers, currentUser: req.user, page: 'computers'});
-        }
-    });
-    
+    if(req.query.search){
+        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+         //Get all computers from database
+        Computer.find({name: regex}, function(err, allComputers){
+            if(err){
+                console.log(err);
+            } else {
+                if(allComputers.length < 1){
+                    req.flash("error", "No matches found, please try again.");
+                    res.redirect("/computers");
+                }
+                res.render("computers/index", {computers: allComputers, currentUser: req.user, page: 'computers'});
+            }
+        });
+    } else {
+        //Get all computers from database
+        Computer.find({}, function(err, allComputers){
+            if(err){
+                console.log(err);
+            } else {
+                res.render("computers/index", {computers: allComputers, currentUser: req.user, page: 'computers'});
+            }
+        });
+    }
 });
 
 router.post("/computers", middleware.isLoggedIn, function(req, res){
@@ -86,6 +106,7 @@ router.delete("/computers/:id", middleware.checkComputerOwnership, function(req,
         }
     })
 });
+
 
 
 module.exports = router;
