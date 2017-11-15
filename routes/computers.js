@@ -1,7 +1,7 @@
-var express = require("express");
-var router = express.Router();
-var Computer = require("../models/computer");
-var middleware = require("../middleware")
+var  express = require("express"),
+     router = express.Router(),
+     Computer = require("../models/computer"),
+     middleware = require("../middleware");
 
 //define function for search feature
 function escapeRegex(text){

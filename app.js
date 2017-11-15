@@ -1,24 +1,24 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var mongoose = require('mongoose');
-var passport = require('passport');
-var LocalStrategy = require('passport-local');
-var methodOverride = require('method-override');
-var Computer = require("./models/computer");
-var seedDB = require("./seeds");
-var Comment = require("./models/comment");
-var Phone = require("./models/phone");
-var User = require("./models/user");
-var flash = require('connect-flash');
+var express = require("express")
+     app = express(),
+     bodyParser = require("body-parser"),
+     mongoose = require('mongoose'),
+     passport = require('passport'),
+     LocalStrategy = require('passport-local'),
+     methodOverride = require('method-override'),
+     Computer = require("./models/computer"),
+     seedDB = require("./seeds"),
+     Phone = require("./models/phone"),
+     User = require("./models/user"),
+     flash = require('connect-flash');
 
-var commentRoutes = require("./routes/comments");
-var computerRoutes = require("./routes/computers");
-var phoneRoutes = require("./routes/phones");
-var authRoutes = require("./routes/index");
+var  commentRoutes = require("./routes/comments"),
+     computerRoutes = require("./routes/computers"),
+     phoneRoutes = require("./routes/phones"),
+     authRoutes = require("./routes/index");
 app.use(methodOverride("_method"));
 app.use(flash());
-//seedDB(); //seed the database
+
+var Comment = require("./models/comment")
 
 mongoose.connect("mongodb://localhost/yelp_tech");
 app.use(bodyParser.urlencoded({extended: true}));

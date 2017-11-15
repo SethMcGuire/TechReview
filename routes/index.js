@@ -1,12 +1,12 @@
-var express = require("express");
-var router = express.Router();
-var passport = require('passport');
-var User = require("../models/user");
-var Computer = require("../models/computer")
-var Phone = require('../models/phone');
-var async = require("async");
-var nodemailer = require("nodemailer");
-var crypto = require("crypto");
+var express = require("express"),
+   router = express.Router(),
+   passport = require('passport'),
+   User = require("../models/user"),
+   Computer = require("../models/computer"),
+   Phone = require('../models/phone'),
+   async = require("async"),
+   nodemailer = require("nodemailer"),
+   crypto = require("crypto"),
 
 router.get("/", function(req, res){
     res.render("landing");

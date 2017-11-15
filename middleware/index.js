@@ -1,7 +1,7 @@
-var middlewareObj = {};
-var Computer = require("../models/computer");
-var Comment = require("../models/comment");
-var Phone = require("../models/phone");
+var  middlewareObj = {},
+     Computer = require("../models/computer"),
+     Comment = require("../models/comment"),
+     Phone = require("../models/phone");
 
 middlewareObj.checkComputerOwnership = function (req, res, next) {
     if (req.isAuthenticated()) {
